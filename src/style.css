@@ -7,6 +7,7 @@ body {
 h1 {
   text-align: center;
   font-size: 40px;
+  max-width: 100%;
 }
 
 h2 {
@@ -81,4 +82,16 @@ footer a:active {
 .city-info .time small {
   font-size: 20px;
   vertical-align: middle;
+}
+
+@media only screen and (max-width: 499px) {
+  .city-info {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .material-symbols-outlined {
+    display: none;
+  }
 }
