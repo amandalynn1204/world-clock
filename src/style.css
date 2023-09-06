@@ -1,7 +1,84 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-image: url("background-images/clock-background.jpg");
+  background-size: cover;
+}
+
 h1 {
   text-align: center;
+  font-size: 40px;
+}
+
+h2 {
+  margin: 0 auto;
+  font-size: 28px;
+}
+
+select {
+  font-family: "Courier New", Courier, monospace;
+  width: 100%;
+  font-size: 16px;
+  padding: 5px;
 }
 
 footer {
   text-align: center;
+  color: rgb(220, 220, 220);
+  background: black;
+  width: 450px;
+  margin: 0 auto;
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+footer a {
+  color: rgb(160, 160, 160);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer a:active {
+  color: rgb(220, 220, 220);
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  max-width: 550px;
+  margin: 25px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 45px;
+  position: relative;
+  top: 8px;
+  padding: 0 8px;
+}
+
+.city-info {
+  padding: 15px 0;
+  border-bottom: 1px dashed gray;
+  display: flex;
+  justify-content: space-between;
+}
+
+.city-info:last-child {
+  border-bottom: none;
+}
+
+.city-info .time {
+  font-weight: bold;
+  font-size: 35px;
+  position: relative;
+  top: 5px;
+}
+
+.city-info .time small {
+  font-size: 20px;
+  vertical-align: middle;
 }
