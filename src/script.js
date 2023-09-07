@@ -19,7 +19,7 @@ function dipslayNewYorkTime() {
   let newYorkDateElement = newYorkElement.querySelector(".date");
   let newYorkTimeElement = newYorkElement.querySelector(".time");
 
-  let newYorkDate = moment().tz("America/New_York").format("MMM Do, YYYY");
+  let newYorkDate = moment().tz("America/New_York").format("MMMM Do, YYYY");
   let newYorkTime = moment()
     .tz("America/New_York")
     .format("h:mm:ss [<small>]A[</small>]");

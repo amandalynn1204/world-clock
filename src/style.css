@@ -20,6 +20,8 @@ select {
   width: 100%;
   font-size: 16px;
   padding: 5px;
+  border-radius: 4px;
+  color: black;
 }
 
 footer {
@@ -48,7 +50,7 @@ footer a:active {
 .container {
   background: rgba(255, 255, 255, 0.9);
   max-width: 550px;
-  margin: 25px auto;
+  margin: 50px auto 25px;
   padding: 20px;
   border-radius: 8px;
 }
@@ -62,7 +64,7 @@ footer a:active {
 }
 
 .city-info {
-  padding: 15px 0;
+  padding: 20px 0;
   border-bottom: 1px dashed gray;
   display: flex;
   justify-content: space-between;
@@ -87,6 +89,7 @@ footer a:active {
 @media only screen and (max-width: 499px) {
   .city-info {
     display: block;
+    text-align: center;
   }
 }
 
