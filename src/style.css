@@ -20,8 +20,10 @@ select {
   width: 100%;
   font-size: 16px;
   padding: 5px;
+  border: 1px solid gray;
   border-radius: 4px;
   color: black;
+  background: white;
 }
 
 footer {
@@ -50,7 +52,7 @@ footer a:active {
 .container {
   background: rgba(255, 255, 255, 0.9);
   max-width: 550px;
-  margin: 50px auto 25px;
+  margin: 40px auto 25px;
   padding: 20px;
   border-radius: 8px;
 }
