@@ -31,6 +31,9 @@ function dipslayNewYorkTime() {
 function updateCity(event) {
   let cityContainerElement = document.querySelector("#city-container");
   let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
   let cityName = cityTimeZone.split("/")[1].replace("_", " ");
   let cityDate = moment().tz(cityTimeZone).format("MMMM Do, YYYY");
   let cityTime = moment()
