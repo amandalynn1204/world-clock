@@ -28,8 +28,30 @@ function dipslayNewYorkTime() {
   newYorkTimeElement.innerHTML = newYorkTime;
 }
 
+function updateCity(event) {
+  let cityContainerElement = document.querySelector("#city-container");
+  let cityTimeZone = event.target.value;
+  let cityName = cityTimeZone.split("/")[1].replace("_", " ");
+  let cityDate = moment().tz(cityTimeZone).format("MMMM Do, YYYY");
+  let cityTime = moment()
+    .tz(cityTimeZone)
+    .format("h:mm:ss [<small>]A[</small>]");
+
+  if (event.target.value.length > 0) {
+    cityContainerElement.innerHTML = `<div class="city-info">
+        <div>
+          <h2>${cityName}</h2>
+          <div class="date">${cityDate}</div>
+        </div>
+        <div class="time">${cityTime}</div>
+      </div>`;
+  }
+}
+
+let citySelectorElement = document.querySelector("#cities");
+citySelectorElement.addEventListener("change", updateCity);
+
 displayLosAngelesTime();
 dipslayNewYorkTime();
-
 setInterval(displayLosAngelesTime, 1000);
 setInterval(dipslayNewYorkTime, 1000);
