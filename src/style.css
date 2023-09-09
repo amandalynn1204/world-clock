@@ -88,6 +88,18 @@ footer a:active {
   vertical-align: middle;
 }
 
+.reload-link {
+  color: rgb(160, 160, 160);
+}
+
+.reload-link:hover {
+  text-decoration: none;
+}
+
+.reload-link:active {
+  color: rgb(80, 80, 80);
+}
+
 @media only screen and (max-width: 499px) {
   .city-info {
     display: block;

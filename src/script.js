@@ -1,31 +1,35 @@
 function displayLosAngelesTime() {
   let losAngelesElement = document.querySelector("#los-angeles");
-  let losAngelesDateElement = losAngelesElement.querySelector(".date");
-  let losAngelesTimeElement = losAngelesElement.querySelector(".time");
+  if (losAngelesElement) {
+    let losAngelesDateElement = losAngelesElement.querySelector(".date");
+    let losAngelesTimeElement = losAngelesElement.querySelector(".time");
 
-  let losAngelesDate = moment()
-    .tz("America/Los_Angeles")
-    .format("MMMM Do, YYYY");
-  let losAngelesTime = moment()
-    .tz("America/Los_Angeles")
-    .format("h:mm:ss [<small>]A[</small>]");
+    let losAngelesDate = moment()
+      .tz("America/Los_Angeles")
+      .format("MMMM Do, YYYY");
+    let losAngelesTime = moment()
+      .tz("America/Los_Angeles")
+      .format("h:mm:ss [<small>]A[</small>]");
 
-  losAngelesDateElement.innerHTML = losAngelesDate;
-  losAngelesTimeElement.innerHTML = losAngelesTime;
+    losAngelesDateElement.innerHTML = losAngelesDate;
+    losAngelesTimeElement.innerHTML = losAngelesTime;
+  }
 }
 
 function dipslayNewYorkTime() {
   let newYorkElement = document.querySelector("#new-york");
-  let newYorkDateElement = newYorkElement.querySelector(".date");
-  let newYorkTimeElement = newYorkElement.querySelector(".time");
+  if (newYorkElement) {
+    let newYorkDateElement = newYorkElement.querySelector(".date");
+    let newYorkTimeElement = newYorkElement.querySelector(".time");
 
-  let newYorkDate = moment().tz("America/New_York").format("MMMM Do, YYYY");
-  let newYorkTime = moment()
-    .tz("America/New_York")
-    .format("h:mm:ss [<small>]A[</small>]");
+    let newYorkDate = moment().tz("America/New_York").format("MMMM Do, YYYY");
+    let newYorkTime = moment()
+      .tz("America/New_York")
+      .format("h:mm:ss [<small>]A[</small>]");
 
-  newYorkDateElement.innerHTML = newYorkDate;
-  newYorkTimeElement.innerHTML = newYorkTime;
+    newYorkDateElement.innerHTML = newYorkDate;
+    newYorkTimeElement.innerHTML = newYorkTime;
+  }
 }
 
 function updateCity(event) {
@@ -47,7 +51,9 @@ function updateCity(event) {
           <div class="date">${cityDate}</div>
         </div>
         <div class="time">${cityTime}</div>
-      </div>`;
+        
+      </div>
+      <a href="" onclick="location.reload()" class="reload-link">Back to home</a>`;
   }
 }
 
